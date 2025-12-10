@@ -1,13 +1,13 @@
 apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
-  name: app-demo
+  name: projeto1
   labels:
-    app: app-demo
+    app: projeto1
 spec:
   to:
     kind: Service
-    name: app-demo
+    name: projeto1
     weight: 100
   port:
     targetPort: 8080

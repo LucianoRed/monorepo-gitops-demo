@@ -3,6 +3,6 @@ kind: Namespace
 metadata:
   annotations:
     argocd.argoproj.io/managed-by: openshift-gitops
-  name: app-demo2
+  name: projeto2
   labels:
-    app: app-demo2
+    app: projeto2
