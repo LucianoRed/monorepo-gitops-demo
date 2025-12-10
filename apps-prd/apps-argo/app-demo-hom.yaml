@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: pull-projeto1
+  namespace: openshift-gitops
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/LucianoRed/monorepo-gitops-demo.git
+    targetRevision: HEAD
+    path: departamentos/sub-departamento/projeto1
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: pull-projeto1
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
