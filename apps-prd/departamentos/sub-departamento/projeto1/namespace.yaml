@@ -1,6 +1,8 @@
 apiVersion: v1
 kind: Namespace
 metadata:
+  annotations:
+    argocd.argoproj.io/managed-by: openshift-gitops
   name: app-demo
   labels:
     app: app-demo
