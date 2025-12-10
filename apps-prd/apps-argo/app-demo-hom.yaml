@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: https://github.com/LucianoRed/monorepo-gitops-demo.git
     targetRevision: HEAD
-    path: departamentos/sub-departamento/projeto1
+    path: apps-prd/departamentos/sub-departamento/projeto1
   destination:
     server: https://kubernetes.default.svc
     namespace: pull-projeto1
