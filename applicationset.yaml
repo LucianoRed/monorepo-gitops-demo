@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
 metadata:
   name: app-demo-set
-  namespace: argocd
+  namespace: openshift-gitops
 spec:
   generators:
     - matrix:
