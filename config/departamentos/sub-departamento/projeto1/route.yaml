@@ -1,0 +1,14 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: app-demo
+  labels:
+    app: app-demo
+spec:
+  to:
+    kind: Service
+    name: app-demo
+    weight: 100
+  port:
+    targetPort: 8080
+  wildcardPolicy: None

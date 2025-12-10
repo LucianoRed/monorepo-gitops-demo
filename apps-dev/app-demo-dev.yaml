@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: app-demo-dev
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/LucianoRed/monorepo-gitops-demo.git
+    targetRevision: HEAD
+    path: config/departamentos/sub-departamento/projeto1
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: app-demo-dev
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
